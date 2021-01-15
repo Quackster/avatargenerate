@@ -590,28 +590,26 @@
 
             jQuery.each( load.sets, function( index, value )
             {
-								if ((value.club == 1 && localStorage.getItem("hasClub") == true) || value.club == 0)
+								if ((value.club == 1 && localStorage.getItem("hasClub") == "1") || value.club == 0)
 								{
 									if( value.gender == _this.gender && value.selectable == 1 || value.gender == "U" && value.selectable == 1 )
 									{
 											var currentlySelected = _this.getPart( type );
-											console.log(type);
 											
 											if (currentlySelected)
 											{
+												var partString = type + "-" + index + "-" + currentlySelected.color;
 
-											var partString = type + "-" + index + "-" + currentlySelected.color;
+												var asset  = $('<a class="clothes-object ' + type + '" data-clothing="' + index + '" href="#"></a>');
 
-											var asset  = $('<a class="clothes-object ' + type + '" data-clothing="' + index + '" href="#"></a>');
+												if( index == currentlySelected.set )
+												{
+														asset.addClass( 'selected' );
+												}
 
-											if( index == currentlySelected.set )
-											{
-													asset.addClass( 'selected' );
-											}
+												asset.css( 'background-image', 'url( https://cdn.classichabbo.com/habbo-imaging/avatarimage?figure=' + partString + '&gender=' + _this.gender + ' )' );
 
-											asset.css( 'background-image', 'url( https://cdn.classichabbo.com/habbo-imaging/avatarimage?figure=' + partString + '&gender=' + _this.gender + ' )' );
-
-											$( clothesObject ).append( asset );
+												$( clothesObject ).append( asset );
 											}
 									}
 								}
@@ -638,7 +636,7 @@
 
             jQuery.each( colors, function( index, value )
             {
-								if ((value.club == 1 && localStorage.getItem("hasClub") == true) || value.club == 0)
+								if ((value.club == 1 && localStorage.getItem("hasClub") == "1") || value.club == 0)
 								{
 									if( value.selectable == 1 )
 									{
