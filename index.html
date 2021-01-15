@@ -13,7 +13,9 @@
 
 
 <div class="container">
-
+    <script>
+      localStorage.setItem("hasClub", false);
+    </script>
     <div id="avatarSelector" class="builder-viewport">
 
         <!-- Main Navigation -->
@@ -36,9 +38,9 @@
                     <a href="#" data-navigate="lg" data-subnav="bottoms"><img src="./app/img/bottoms.png" /></a>
                 </li>
 
-                <li>
+                <!--<li>
                     <a href="#"><img src="./app/img/saved-looks.png" /></a>
-                </li>
+                </li>-->
             </ul>
 
         </div>
@@ -89,13 +91,13 @@
                     <a href="#" class="tops nav-selected" data-navigate="ch"></a>
                 </li>
 
-                <li>
+                <!-- <li>
                     <a href="#" class="chest" data-navigate="cp"></a>
-                </li>
+                </li> -->
 
-                <li>
+                <!--<li>
                     <a href="#" class="jackets" data-navigate="cc"></a>
-                </li>
+                </li>-->
 
                 <li>
                     <a href="#" class="accessories" data-navigate="ca"></a>
@@ -148,7 +150,7 @@
 
 
 <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-<script src="./app/js/jquery.avatargenerate.min.js" type="text/javascript"></script>
+<script src="./app/js/jquery.avatargenerate.js" type="text/javascript"></script>
 
 </body>
 </html>

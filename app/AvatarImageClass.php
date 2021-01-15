@@ -38,7 +38,7 @@ class AvatarImage
 
     public function __construct()
     {
-        $this->convertToJSON( 'http://habboo-a.akamaihd.net/gordon/PRODUCTION-201606242205-761645438/figuremap.xml' );
+        $this->convertToJSON( 'figuredata.xml' );
     }
 
 
